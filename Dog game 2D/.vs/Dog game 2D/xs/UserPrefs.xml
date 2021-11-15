@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{04A35E40-5E8F-F08B-6C08-A80D600A8773}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CamControl.cs">
+    <Files>
+      <File FileName="Assets/Scripts/DogScript.cs" Line="31" Column="2" />
+      <File FileName="Assets/Scripts/CamControl.cs" Line="7" Column="24" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Dog game 2D" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="CamControl.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="Dog game 2D" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="aeaa716b-ccf4-4d5e-95d2-e4a3c4c954f8" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
