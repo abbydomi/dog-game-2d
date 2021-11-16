@@ -11,7 +11,7 @@ public class CamControl : MonoBehaviour
     void Start()
     {
         
-    }
+    }//smaller than-130 bigger than160
 
     // Update is called once per frame
     void Update()

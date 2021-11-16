@@ -302,7 +302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &632024064
 Transform:
   m_ObjectHideFlags: 0
@@ -426,13 +426,14 @@ GameObject:
   - component: {fileID: 842122799}
   - component: {fileID: 842122798}
   - component: {fileID: 842122800}
+  - component: {fileID: 842122801}
   m_Layer: 0
-  m_Name: block red
-  m_TagString: Untagged
+  m_Name: wall
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &842122798
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -491,13 +492,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842122797}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8683, y: 1.00801, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.086360164, w: -0.996264}
+  m_LocalPosition: {x: 1.329, y: 1.00801, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.908}
 --- !u!61 &842122800
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -524,6 +525,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!50 &842122801
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842122797}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,9 +817,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1662438998}
   - component: {fileID: 1662438997}
-  - component: {fileID: 1662438999}
   - component: {fileID: 1662439000}
   - component: {fileID: 1662439001}
+  - component: {fileID: 1662438999}
   m_Layer: 0
   m_Name: dog debug
   m_TagString: Untagged
@@ -884,6 +906,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   running: 0
   speed: 0.05
+  rot: 0
+  st: 0
 --- !u!50 &1662439000
 Rigidbody2D:
   serializedVersion: 4
@@ -905,8 +929,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1662439001
-BoxCollider2D:
+--- !u!70 &1662439001
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -919,18 +943,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.27}
-    newSize: {x: 0.31, y: 0.27}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.31, y: 0.27}
-  m_EdgeRadius: 0
+  m_Size: {x: 0.27, y: 0.22}
+  m_Direction: 1
 --- !u!1 &1841980346
 GameObject:
   m_ObjectHideFlags: 0

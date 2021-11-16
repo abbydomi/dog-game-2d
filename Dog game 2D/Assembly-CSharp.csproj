@@ -53,8 +53,8 @@
     <UnityVersion>2020.3.13f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets/Scripts/DogScript.cs" />
     <Compile Include="Assets/Scripts/CamControl.cs" />
+    <Compile Include="Assets/Scripts/DogScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
