@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class DogScript : MonoBehaviour
 {
-    public bool running;
     public float speed;
     public float rot;
     public enum DOGState {Run, Bump };
     public DOGState st;
+    public Animator animator;
+    float amount = 3;
+    float amount1 = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +23,20 @@ public class DogScript : MonoBehaviour
         rot = transform.rotation.z;
         if (Input.GetKey(KeyCode.D))
         {
-            transform.eulerAngles += Vector3.forward * 3;
+            amount1 = 3;
+            amount += 0.1f;
+            transform.eulerAngles += Vector3.forward * amount;
         }
         else if (Input.GetKey(KeyCode.A))
         {
-            transform.eulerAngles -= Vector3.forward * 3;
+            amount = 3;
+            amount1 += 0.1f;
+            transform.eulerAngles -= Vector3.forward * amount1;
+        }
+        else
+        {
+            amount = 3;
+            amount1 = 3;
         }
         if ((gameObject.transform.rotation.z > 0.68f) || (gameObject.transform.rotation.z < -0.6f))
         { 
@@ -39,19 +50,23 @@ public class DogScript : MonoBehaviour
         switch(st)
         {
             case DOGState.Run:
-                transform.Translate(new Vector3(speed*50*Time.deltaTime, 0, 0));
+                transform.Translate(new Vector3(speed * 50 * Time.deltaTime, 0, 0));
+                animator.Play("dog run");
                 break;
 
             case DOGState.Bump:
+                animator.Play("dog sit");
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    st = DOGState.Run;
+                }
                 break;
         }
     }
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("hello?");
         if (collision.gameObject.tag == "wall")
         {
-            Debug.Log("YEOUCH");
             st = DOGState.Bump;
         }
     }
