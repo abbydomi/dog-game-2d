@@ -16,7 +16,7 @@ public class dogshadowbehaviour : MonoBehaviour
     void Update()
     {
         transform.position = player.transform.position;
-        
+        transform.eulerAngles = new Vector3(0,0,0);
 
         if (gameObject.GetComponent<SpriteRenderer>().flipY == true)
         {

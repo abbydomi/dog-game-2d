@@ -9,6 +9,8 @@ public class DogScript : MonoBehaviour
     public enum DOGState {Run, Bump };
     public DOGState st;
     public Animator animator;
+    public float ttime; 
+
     float amount = 3;
     float amount1 = 3;
     // Start is called before the first frame update
@@ -20,6 +22,8 @@ public class DogScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        amount = Mathf.Clamp(amount, 3, 10);
+        amount1 = Mathf.Clamp(amount, 3, 10);
         rot = transform.rotation.z;
         if (Input.GetKey(KeyCode.D))
         {
@@ -56,7 +60,8 @@ public class DogScript : MonoBehaviour
 
             case DOGState.Bump:
                 animator.Play("dog sit");
-                if (Input.GetKeyDown(KeyCode.Return))
+                ttime += Time.deltaTime;
+                if (ttime > 1)
                 {
                     st = DOGState.Run;
                 }
@@ -67,7 +72,11 @@ public class DogScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "wall")
         {
-            st = DOGState.Bump;
+            switch(st)
+            {
+                case DOGState.Run: st = DOGState.Bump; ttime = 0f; break;
+                case DOGState.Bump: break;
+            }
         }
     }
 }

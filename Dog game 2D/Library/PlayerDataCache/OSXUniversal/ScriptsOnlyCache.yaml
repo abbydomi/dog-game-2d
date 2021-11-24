@@ -458,7 +458,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 6dbcd39a4202bad77838e4ebd16bf512
+      Hash: 406bee768da587ca6e4e3e6d695bb2e0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DogScript
