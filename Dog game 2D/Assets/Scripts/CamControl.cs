@@ -5,13 +5,13 @@ using UnityEngine;
 public class CamControl : MonoBehaviour
 {
     public GameObject follow;
-    [HideInInspector]
+    
     float x, y;
     // Start is called before the first frame update
     void Start()
     {
         
-    }//smaller than-130 bigger than160
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,5 +20,10 @@ public class CamControl : MonoBehaviour
         y = Mathf.Lerp(y, follow.transform.position.y, 0.1f);
 
         transform.position = (new Vector3(x, y, -10));
+    }
+    public void FuncionTest()
+    {
+        Debug.Log("Game end");
+        Application.Quit();
     }
 }

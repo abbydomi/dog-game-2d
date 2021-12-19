@@ -1,26 +1,22 @@
 ﻿<Properties StartupConfiguration="{04A35E40-5E8F-F08B-6C08-A80D600A8773}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DogScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/DogScript.cs" Line="30" Column="10" />
-      <File FileName="Assets/Scripts/dogshadowbehaviour.cs" Line="18" Column="56" />
+      <File FileName="Assets/Scripts/CamControl.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/DogScript.cs" Line="85" Column="41" />
+      <File FileName="Assets/Scripts/dogshadowbehaviour.cs" Line="18" Column="9" />
+      <File FileName="Assets/Scripts/enemyBehaviour.cs" Line="14" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Dog game 2D" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="DogScript.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="Dog game 2D" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="97a458ec-c8ed-4189-8b33-e2115297bfcc" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="dbcb8579-5ec8-49c9-870b-66dc85faf8eb" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
